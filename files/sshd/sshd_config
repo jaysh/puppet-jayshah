@@ -1,0 +1,23 @@
+Port 22
+Protocol 2
+
+# Logging
+SyslogFacility AUTHPRIV
+
+# Unless you're specifically trying to attack me
+# (in which case, you know what user I use), good
+# luck brute-forcing my root password.
+PermitRootLogin no
+
+# GSSAPI options
+GSSAPIAuthentication no
+
+# Accept locale-related environment variables
+AcceptEnv LANG LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE LC_MONETARY LC_MESSAGES
+AcceptEnv LC_PAPER LC_NAME LC_ADDRESS LC_TELEPHONE LC_MEASUREMENT
+AcceptEnv LC_IDENTIFICATION LC_ALL LANGUAGE
+AcceptEnv XMODIFIERS
+
+Subsystem	sftp	/usr/libexec/openssh/sftp-server
+
+UseDNS no
