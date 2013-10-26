@@ -13,6 +13,7 @@ class jayshah {
   # I like to manage my server as moi.
   class { 'jayshah::sudo_user':
     username => 'jay',
+    password => '$1$ILRyJM7Z$Mh1w9F9UIdSbeeThs/8i11', # changeme
   }
 
   include jayshah::sshd
