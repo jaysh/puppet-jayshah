@@ -13,6 +13,7 @@ class jayshah {
   # I like to manage my server as moi.
   class { 'jayshah::sudo_user':
     username => 'jay',
+    ssh_key  => 'AAAAB3NzaC1yc2EAAAADAQA..snip..G2pBLF11L',
     password => '$1$ILRyJM7Z$Mh1w9F9UIdSbeeThs/8i11', # changeme
   }
 
